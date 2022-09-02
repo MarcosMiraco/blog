@@ -1,0 +1,226 @@
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://lh3.googleusercontent.com/u_ASVltuuP0jIjuFVSwJkjkDEu4RiSOPh_rtddLOZEZGkseWsUnQ_v_1DXUIlpLmAfg-Mr2dI-BgQx58F6hgAt0_pq-EBt5FpJ6ChFABlex-mMGObCZKFCEWIHVkRzt1NvnzRXjeP3864jLF4BoBF_ssH6PqB5npAn6U0TuLxHJCbraK9Q4-5-jUs1D2nXYj_LFCeLkxj8Ocvr4AttZeqIt96SI6gkBFM5tOioE2ael8JKN_i85mqEotu-BStEEIdCn1BhRUT_t48XbdAWL2Bt6tzgUppQwFbc2U3wZ8VTJ3Rc9wGo8d-VJu2nEJ1GDXOFGjrFnrA5oJUF526Syy1_Ert9da_uUiQ2WE0oZ2umSQyV7-Rz2cbnaSO1feelSOvUV3WewvFexwUAGKpXBsTpbG7EmKN01rBxUPF_OEUy0wtpDS3nBnnmVIScyFwGpSWcTHi-5vDzX11Pj8lwMxn_YAMnTIiApOBamFi0ZAslhlT7qnYesj5rkMMxIpd20IRGKP4cFmAsQEOj3thPlFH8toNjm2hKL_RYAmvW_8F5rBR2-F3jwvtmoYXttIADEAflQz8w7651U41OPHk-4hyiLyTbEKqui2rGQy_NFWAmuGP8wd-hCoPOJwpukL4iuCMrndLZIn-dUV_ggp9CNoLkgbJt5W175zfVIvbJgzI9hd2KimsItwajOkYDd7IIEoxoxxYE4wQeaBbrtaCTF6Gx9UVTK4c6jIg5h7c15oMRD_U1XIfaIDpAW9U6wTVsS210vVU2JVjBLXJotcS7qQzxcGB_0bqvix=w923-h616-no?pageId=102567711928718121889&authuser=0');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: blueviolet;
+}
+
+.card {
+    width: 80vw;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.801);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    box-shadow: 0 0 25px 5px black;
+    border-radius: 2%;
+}
+
+#card-login {
+    height: 60vh;
+}
+
+#card-cadastrar {
+    height: 70vh;
+}
+
+
+#card-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+#card-formulario input[type='password'],
+#card-formulario input[type='email'],
+#card-formulario input[type='text'],
+#card-formulario input[type='url'] {
+    border: none;
+    width: 40vw;
+    height: 3vh;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.box-shadowPadrao {
+    box-shadow: 0 0 4px 1px black;
+}
+
+#card-forumlario--nome {
+    width: 40vw;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+#card-formulario--nome---sexo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#card-formulario--nome---sexo div {
+    display: flex;
+    align-items: center;
+    gap: 5px;    
+}
+
+#card-formulario input::placeholder {
+    transition: padding 0.3s, opacity 0.3s;
+}
+
+#card-formulario input:hover::placeholder {
+    padding-left: 10px;
+    transition: padding 0.3s;
+}
+
+#card-formulario input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#card-formulario--senha {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#card-formulario--senha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#card-formulario--senha input[type='checkbox']{
+    width: 2vw;
+    height: 2vh;
+}
+
+#card-formulario--senha---mostrar-desligar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#card-div {
+    display: flex;
+    gap: 10px;
+}
+
+#card-formulario--login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#card-formulario--login---manterLogado {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.negado {
+    animation: sacudir 0.5s;
+}
+
+@keyframes sacudir {
+    0% {
+        transform: translateX(5%);
+    }
+    40% {
+        transform: translateX(-5%);
+    }
+    60% {
+        transform: translateX(5%);
+    }
+    80% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(5%);
+    }
+}
+
+.separacao {
+    display: inline-block;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(107, 107, 107);
+}
+
+.botao-padrao {
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.botao-padrao:hover {
+    background-color: lightgreen;
+    transition: background-color 0.3s;
+}
+
+.botao-login {
+    background-color: rgb(132, 199, 255);
+    text-transform: uppercase;
+    border-radius: 3%;
+    box-shadow: 0 0 4px 1px black;
+    transition: background-color 0.3s;
+}
+
+.link-formulario {
+    margin-inline: 8px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.link-formulario:hover {
+    color: black;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+dialog {
+    border: none;
+    background-color: #F3F3F3;
+    box-shadow: 0 0 5px 2px black;
+}
+
+dialog::backdrop {
+    background-color: black;
+    opacity: .4;
+}
+
+dialog > div {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+dialog button {
+    border: none;
+    background-color: #EDBC64;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+dialog a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}

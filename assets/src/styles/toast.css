@@ -1,0 +1,238 @@
+:root {
+    ---show-animation-time: .5s;
+    ---remove-animation-time: .4s;
+    ---shrink-animation-time: .3s;
+    ---progress-animation-color: white;
+    ---progress: 1;
+}
+
+.toast-conteiner {
+    position: fixed;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.toast-conteiner-continer {
+    position: relative;
+}
+
+.toast {
+    background-color: white;
+    padding: 20px 20px 20px 40px;
+    box-shadow: 0 0 3px 2px rgba(150, 150, 150, 0.5);
+    border-radius: .5em;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.toast-icon-conteiner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.toast-icon {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    width: 25px;
+    margin-left: 10px;
+}
+
+.toast.autoClose-normal::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #dc2424, #4a569d);    background: linear-gradient(to right, #dc2424, #4a569d);    background: linear-gradient();
+    width: calc(100% * var(---progress));
+    inset: 92% 0 0 0;
+    border-radius: 5px;
+}
+
+.toast.autoClose::before {
+    content: '';
+    position: absolute;
+    background: var(---progress-animation-color);
+    width: calc(100% * var(---progress));
+    inset: 92% 0 0 0;
+    border-radius: 5px;
+}
+
+.toast.canClose:after {
+    content: "\000D7";
+    color: rgb(153, 153, 153);
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    transform: scale(1.5);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.shrink {
+    animation: shrink var(---shrink-animation-time);
+}
+
+.z-index {
+    z-index: 1;
+}
+
+.show-right {
+    animation: slideRight var(---show-animation-time);
+}
+
+.show-left {
+    animation: slideLeft var(---show-animation-time);
+}
+
+.show-top-center {
+    animation: slideTopCenter var(---show-animation-time);
+}
+
+.show-bottom-center {
+    animation: slideBottomCenter var(---show-animation-time);
+}
+
+.remove-right {
+    animation: slideRemoveRight var(---remove-animation-time);
+}
+
+.remove-left {
+    animation: slideRemoveLeft var(---remove-animation-time);
+}
+
+.remove-top-center {
+    animation: slideRemoveTopCenter var(---remove-animation-time);
+}
+
+.remove-bottom-center {
+    animation: slideRemoveBottomCenter var(---remove-animation-time);
+}
+
+.toast-conteiner[data-position^='top-'] {
+    top: 0;
+}
+
+.toast-conteiner[data-position^='bottom-'] {
+    bottom: 0;
+}
+
+.toast-conteiner[data-position$='-right'] {
+    right: 0;
+}
+
+.toast-conteiner[data-position$='-left'] {
+    left: 0;
+}
+
+.toast-conteiner[data-position$='-center'] {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes shrink {
+    0% {
+        border: 1px solid black;
+        font-size: inherit;
+        max-height: none;
+        padding: 20px;
+    }
+    100% {
+        border: none;
+        font-size: 0;
+        max-height: 0px;
+        padding: 0;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(110%);
+    }
+    80% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-110%);
+    }
+    80% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTopCenter {
+    0% {
+        transform: translateY(-110vw);
+    }
+    80% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottomCenter {
+    0% {
+        transform: translateY(110vw);
+    }
+    80% {
+        transform: translateY(-40%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRemoveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes slideRemoveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+@keyframes slideRemoveTopCenter {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-110vw);
+    }
+}
+
+@keyframes slideRemoveBottomCenter {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(110vw);
+    }
+}

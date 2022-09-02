@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/MOwOk1cZPN8sECdrOQjou5DpLz0jiPDunHIh1Ohpp8c1KbjXO5mMddls7ZLW1Q6Ucls7_fQRjzoyQ4JOPLpuGy5jgCwcSgAzT1OIFuZig-aflh738vnC73rWDeCXj2tX8GF5r0uSn4Z6RDOzhdTlQ5IGMmqa5KMKJT9PZ4JxUdZEPsAcddY8gm5gwjeR7Of3tGuNSpj_FJ40IH1ZSdl6zloAOClBtDqBC6LwGCmkhO6tX63Qg_8EjuH6ZRBtYbeJaTDKq30-7kUmgESow3F8v5vd1odxzneod76BbkqkodJ95QEi5DHMYv1wloOIFSY-P14LbGR-TC_uTNqxD1dV86kKA-07rvOP4x7dK9_xuzaNp2SUPux9b7JiJFZi3M_jwjc19E-F9EN6osH---lYMqLRV3kpvk7mp3L3SI-3gRDaJGgMNK1df_NsegZaexbz0V33AyzA-_RviqNdmoSP90Gg8CAPNQx8edADWMmia2LluSqGD5DOx__VRNOSlzvTUMuLAKhRIrhteYVpaaRClW47_324kXsUKgExtBcL9-RfPiSTN-v20kTZ98-xTEMwFOcAj30y8zowhTFn-cEklDebsE-1Iy1e_ds5wDin6Y3SAtLS2PGTKn6eqCjtj_bh-uFkEzU_Ie8I8MK5SkAL8u8P84R-yBcZNer8vXVURuNRTUS1wyb5i8DGOBdp_00B_bs0ltFnQyGyoQPXRnU9zsY=s64-no?pageId=102567711928718121889&authuser=0" type="image/x-icon">
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="../src/styles/home.css">
+    <link rel="stylesheet" href="../src/styles/toast.css">
+    <title>Pagina Inicial</title>
+    <script type="module" src="../src/js/home.js"></script>
+    <script src="../src/js/modoCor.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="header-lista">
+                <li class="header-item">
+                    <figure id="header-figure">
+                        <img id="header-img" src="" alt="Foto do usuário">
+                    </figure>
+                    <span id="header-nomeUsuario">Nome do usuario</span>
+                </li>
+                <li class="header-item">
+                    <button class="botao-padrao" id="botao-modo-cores" data-modo="escuro">
+                        <img src="../images/icon/lua.png" alt="sol/lua" class="modo-cores-icon">
+                        <span id="botao-modo-claro-escuro-texto">Modo Escuro</span>
+                    </button>
+                    <button class="botao-padrao" id="botao-logout">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="section-novoPost">
+            <textarea name="novoPost" id="novoPost" cols="68" rows="5" placeholder="Comece seu post incrivel!"></textarea>
+            <button class="botao-padrao" id="botao-postar">+</button>
+        </section>
+        <section>
+            <ol id="lista-posts"></ol>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <nav>
+                <ul id="lista-paginas"></ul>
+            </nav>
+        </section>
+    </footer>    
+</body>
+</html>

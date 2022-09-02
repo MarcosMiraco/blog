@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/MOwOk1cZPN8sECdrOQjou5DpLz0jiPDunHIh1Ohpp8c1KbjXO5mMddls7ZLW1Q6Ucls7_fQRjzoyQ4JOPLpuGy5jgCwcSgAzT1OIFuZig-aflh738vnC73rWDeCXj2tX8GF5r0uSn4Z6RDOzhdTlQ5IGMmqa5KMKJT9PZ4JxUdZEPsAcddY8gm5gwjeR7Of3tGuNSpj_FJ40IH1ZSdl6zloAOClBtDqBC6LwGCmkhO6tX63Qg_8EjuH6ZRBtYbeJaTDKq30-7kUmgESow3F8v5vd1odxzneod76BbkqkodJ95QEi5DHMYv1wloOIFSY-P14LbGR-TC_uTNqxD1dV86kKA-07rvOP4x7dK9_xuzaNp2SUPux9b7JiJFZi3M_jwjc19E-F9EN6osH---lYMqLRV3kpvk7mp3L3SI-3gRDaJGgMNK1df_NsegZaexbz0V33AyzA-_RviqNdmoSP90Gg8CAPNQx8edADWMmia2LluSqGD5DOx__VRNOSlzvTUMuLAKhRIrhteYVpaaRClW47_324kXsUKgExtBcL9-RfPiSTN-v20kTZ98-xTEMwFOcAj30y8zowhTFn-cEklDebsE-1Iy1e_ds5wDin6Y3SAtLS2PGTKn6eqCjtj_bh-uFkEzU_Ie8I8MK5SkAL8u8P84R-yBcZNer8vXVURuNRTUS1wyb5i8DGOBdp_00B_bs0ltFnQyGyoQPXRnU9zsY=s64-no?pageId=102567711928718121889&authuser=0" type="image/x-icon">
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/toast.css">
+    <title>Cadastro Usuario</title>
+    <script type="module" src="../src/js/cadastro.js"></script>
+</head>
+<body>
+<main>
+    <section class="card" id="card-cadastrar">
+        <h1>Cadastro</h1>
+        <form id="card-formulario" action="#">
+        <div id="card-forumlario--nome">
+            <input type="text" name="nome" id="nome-formulario" maxlength="12" class="box-shadowPadrao" placeholder="Nome de usuario">
+            <div id="card-formulario--nome---sexo">
+                <div>
+                    <label for="masculino">Masculino:</label>
+                    <input type="radio" name="sexo" id="masculino">
+                </div>
+                <div>
+                    <label for="">Feminino:</label>
+                    <input type="radio" name="sexo" id="feminino">                    
+                </div>
+            </div>
+        </div>
+        <input type="email" name="email" id="email-formulario" placeholder="Email" class="box-shadowPadrao">
+        <input type="url" name="url" id="url-formulario" placeholder="Marque o sexo ou cole a url de uma foto" class="box-shadowPadrao">
+        <div id="card-formulario--senha">
+            <input type="password" name="senha" id="senha-formulario" placeholder="Senha" class="box-shadowPadrao">
+            <div id="card-formulario--senha---mostrar-desligar">
+                <input type="checkbox" id="mostrarSenha">
+                <p>Mostrar senha</p>
+            </div>
+        </div>
+        <div id="card-formulario--login">
+            <button class="botao-padrao botao-login">Cadastrar</button>
+        </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>
